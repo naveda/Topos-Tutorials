@@ -1,4 +1,4 @@
-#N canvas 727 266 790 410 10;
+#N canvas 467 214 790 410 10;
 #X declare -path toposLib;
 #X declare -lib mrpeach;
 #X declare -lib mrpeach;
@@ -22,11 +22,8 @@
 #X msg 155 201 stop;
 #X floatatom 19 348 5 0 0 0 - - -;
 #X msg 190 198 loop \$1;
-#X obj 191 179 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 191 179 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 309 267 pp load;
-#X obj 310 159 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
 #X obj 633 -32 declare -path toposLib;
 #X obj 20 74 pipelist;
 #X obj 21 51 unpackOSC;
@@ -37,34 +34,26 @@
 #X msg 162 76 onOff \$1;
 #X msg 128 75 body;
 #X msg 81 76 world;
-#X obj 518 262 scaleXYZ;
-#X floatatom 548 238 5 0 0 0 - - -;
-#X obj 519 216 translateXYZ;
-#X floatatom 565 196 3 0 0 0 - - -;
-#X floatatom 588 195 3 0 0 0 - - -;
-#X floatatom 543 196 3 0 0 0 - - -;
-#X obj 516 149 gemhead;
-#X obj 518 173 rotateXYZ;
-#X floatatom 574 148 5 0 0 0 - - -;
-#X msg 356 158 ex1.txt;
+#X obj 517 280 scaleXYZ;
+#X floatatom 547 256 5 0 0 0 - - -;
+#X obj 518 234 translateXYZ;
+#X floatatom 564 214 3 0 0 0 - - -;
+#X floatatom 587 213 3 0 0 0 - - -;
+#X floatatom 542 214 3 0 0 0 - - -;
+#X obj 515 167 gemhead;
+#X obj 517 191 rotateXYZ;
+#X floatatom 573 166 5 0 0 0 - - -;
 #X obj 19 -40 cnv 15 500 35 empty empty empty 20 12 0 14 -261234 -66577
 0;
-#X text 25 -40 Recording and playing;
-#X obj 502 64 topos.gemwin;
-#X msg 359 201 ex2.txt;
-#X msg 327 293 load ex2.txt;
+#X text 27 -23 Recording and playing;
+#X obj 501 82 topos.gemwin;
 #X text 49 154 Control recording and playing;
-#X msg 360 222 ex1.txt;
-#X msg 361 243 ex2.txt;
-#X text 306 112 Load pre recorded;
-#X text 264 158 Dialog:;
-#X text 359 138 Files:;
-#X obj 650 196 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
+#X text 275 168 Dialog:;
+#X obj 500 141 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
 0;
 #X obj 176 321 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
 0;
-#X text 654 195 2;
-#X obj 476 68 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
+#X obj 475 68 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
 0;
 #X obj 249 113 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
 0;
@@ -77,62 +66,70 @@
 0;
 #X obj 180 226 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
 0;
-#X obj 310 131 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
+#X obj 295 139 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
 0;
-#X text 480 67 1;
+#X text 479 67 1;
 #X text 75 177 3;
 #X text 218 178 4;
 #X text 122 178 5;
 #X text 184 225 6;
-#X text 314 130 7;
+#X text 302 138 7;
 #X obj 227 94 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
 0;
-#X obj 328 312 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
+#X obj 278 294 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
 0;
-#X obj 607 305 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
+#X obj 605 321 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
 0;
 #X text 167 -3 The topos.rec object records movement data and broadcasts
 it to the the correspondent topos.skeleton. Ex: topos rec 999 will
 send the data to topos.skeleton 999;
-#X obj 518 284 topos.skeleton 1;
-#X obj 531 28 topos.skeleton 999;
+#X obj 516 300 topos.skeleton 1;
+#X obj 524 23 topos.skeleton 999;
 #X obj 18 320 topos.rec 1;
-#X obj 531 7 topos.rec 999;
+#X obj 524 2 topos.rec 999;
 #X msg 176 249 write dance3.txt;
-#X msg 357 180 dance2.txt;
-#X connect 0 0 62 0;
+#X text 27 -38 DEMO 2;
+#X msg 303 269 load \$1;
+#X msg 303 295 load movs/dance3.txt;
+#X msg 322 169 load;
+#X text 495 64 Open the gem window;
+#X text 523 143 Change positions of the skeleton;
+#X text 504 140 8;
+#X msg 328 238 symbol movs/dance3.txt;
+#X msg 326 214 symbol movs/dance2.txt;
+#X msg 324 195 symbol movs/dance1.txt;
+#X text 318 139 Load pre recorded files:;
+#X connect 0 0 52 0;
 #X connect 1 0 0 0;
-#X connect 2 0 62 0;
-#X connect 3 0 62 0;
-#X connect 5 0 62 0;
+#X connect 2 0 52 0;
+#X connect 3 0 52 0;
+#X connect 5 0 52 0;
 #X connect 6 0 5 0;
-#X connect 7 0 62 0;
-#X connect 8 0 7 0;
-#X connect 10 0 13 0;
-#X connect 11 0 10 0;
-#X connect 11 1 10 1;
-#X connect 12 0 11 0;
-#X connect 13 0 62 0;
-#X connect 14 0 15 0;
-#X connect 15 0 13 0;
-#X connect 16 0 13 0;
-#X connect 17 0 13 0;
-#X connect 18 0 60 0;
-#X connect 19 0 18 1;
+#X connect 8 0 11 0;
+#X connect 9 0 8 0;
+#X connect 9 1 8 1;
+#X connect 10 0 9 0;
+#X connect 11 0 52 0;
+#X connect 12 0 13 0;
+#X connect 13 0 11 0;
+#X connect 14 0 11 0;
+#X connect 15 0 11 0;
+#X connect 16 0 50 0;
+#X connect 17 0 16 1;
+#X connect 17 0 16 2;
+#X connect 17 0 16 3;
+#X connect 18 0 16 0;
 #X connect 19 0 18 2;
-#X connect 19 0 18 3;
-#X connect 20 0 18 0;
-#X connect 21 0 20 2;
-#X connect 22 0 20 3;
-#X connect 23 0 20 1;
-#X connect 24 0 25 0;
-#X connect 25 0 20 0;
-#X connect 26 0 25 2;
-#X connect 27 0 7 0;
-#X connect 31 0 7 0;
-#X connect 32 0 62 0;
-#X connect 34 0 7 0;
-#X connect 35 0 7 0;
-#X connect 62 0 4 0;
-#X connect 64 0 62 0;
-#X connect 65 0 7 0;
+#X connect 20 0 18 3;
+#X connect 21 0 18 1;
+#X connect 22 0 23 0;
+#X connect 23 0 18 0;
+#X connect 24 0 23 2;
+#X connect 52 0 4 0;
+#X connect 54 0 52 0;
+#X connect 56 0 52 0;
+#X connect 57 0 52 0;
+#X connect 58 0 52 0;
+#X connect 62 0 56 0;
+#X connect 63 0 56 0;
+#X connect 64 0 56 0;

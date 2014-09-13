@@ -20,7 +20,7 @@ the demos:;
 #X text 47 304 Indicates the important elements;
 #X obj 446 242 declare -path toposLib;
 #X text 19 70 PRE-REQUISITES;
-#X text 37 155 Although the objects are simple \, a basic knowledge
+#X text 37 162 Although the objects are simple \, a basic knowledge
 of PD programming is required. Some objects in the library behave like
 GEM objects (see links) and a basic knowledge of GEM is recommended.
 ;
@@ -52,5 +52,5 @@ Luiz Naveda for 0.43.4-extended;
 #X text 32 352 (C) Copyright 2014 Luiz Naveda;
 #X text 36 387 Brazil;
 #X text 34 370 luiznaveda@gmail.com;
-#X obj 350 372 pddplink https://www.jyu.fi/hum/laitokset/musiikki/en/research/coe/materials/mocaptoolbox
+#X obj 523 93 pddplink https://www.jyu.fi/hum/laitokset/musiikki/en/research/coe/materials/mocaptoolbox
 ;

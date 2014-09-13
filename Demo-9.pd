@@ -5,74 +5,74 @@
 #N canvas 584 233 563 525 synthesis 0;
 #X obj 23 2 inlet;
 #X obj 220 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 259 1;
 #X obj 232 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 561 1;
 #X obj 244 76 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 749 1;
 #X obj 254 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 847 1;
 #X obj 266 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 832 1;
 #X obj 278 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 718 1;
 #X obj 288 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 489 1;
 #X obj 300 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 196 1;
 #X obj 312 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 178 1;
 #X obj 324 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 429 1;
 #X obj 200 30 unpack f f f f f f f f f f;
 #X obj 118 164 line;
 #X obj 227 286 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 187 1;
 #X obj 118 142 pack f 100;
 #X obj 149 184 line;
 #X obj 240 285 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 475 1;
 #X obj 149 162 pack f 100;
 #X obj 184 204 line;
 #X obj 252 287 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 671 1;
 #X obj 184 182 pack f 100;
 #X obj 174 124 r \$0f;
 #X obj 206 143 r \$0f;
 #X obj 241 160 r \$0f;
 #X obj 214 226 line;
 #X obj 265 286 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 779 1;
 #X obj 214 204 pack f 100;
 #X obj 271 182 r \$0f;
 #X obj 245 247 line;
 #X obj 275 284 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 790 1;
 #X obj 245 225 pack f 100;
 #X obj 302 203 r \$0f;
 #X obj 283 155 line;
 #X obj 286 283 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 711 1;
 #X obj 283 133 pack f 100;
 #X obj 314 175 line;
 #X obj 298 283 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 548 1;
 #X obj 314 153 pack f 100;
 #X obj 349 195 line;
 #X obj 310 283 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 341 1;
 #X obj 349 173 pack f 100;
 #X obj 339 115 r \$0f;
 #X obj 371 134 r \$0f;
 #X obj 406 151 r \$0f;
 #X obj 379 217 line;
 #X obj 322 283 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 221 1;
 #X obj 379 195 pack f 100;
 #X obj 436 173 r \$0f;
 #X obj 410 238 line;
 #X obj 337 283 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 317 1;
 #X obj 410 216 pack f 100;
 #X obj 467 194 r \$0f;
 #X obj 208 355 pack f f f f f f f f f f;
@@ -178,7 +178,7 @@
 #X msg 18 -12 stop;
 #X floatatom 9 61 5 0 0 0 - - -;
 #X msg 19 -64 loop \$1;
-#X obj 20 -83 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 20 -83 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 8 37 topos.rec 1;
 #X obj 5 131 topos.skeleton 1;
@@ -222,8 +222,7 @@
 #X text 343 104 metro time;
 #X obj 348 126 * 1000;
 #X obj 310 59 list-math * 0.1;
-#X obj 309 28 route distanceFrom collision;
-#X text 237 87 SYNTHESIS;
+#X text 237 98 SYNTHESIS;
 #X text 432 -20 MAPPING;
 #X text 120 139 Try it:;
 #X msg 545 82 record \$1;
@@ -235,31 +234,60 @@
 #X floatatom 653 62 5 0 0 0 - - -;
 #X floatatom 712 54 5 0 0 0 - - -;
 #X obj 655 9 route collision;
-#X obj 545 139 unpack f f;
-#X floatatom 547 160 5 0 0 0 - - -;
-#X floatatom 600 159 5 0 0 0 - - -;
-#X text 10 -132 Applications: mapping a touch in the cloud to a recorded
+#X obj 546 157 unpack f f;
+#X floatatom 548 178 5 0 0 0 - - -;
+#X floatatom 601 177 5 0 0 0 - - -;
+#X text 9 -118 Applications: mapping a touch in the cloud to a recorded
 parameter;
 #X obj 354 248 pddp/print;
-#X obj 546 113 topos.quality LH;
+#X obj 547 131 topos.quality LH;
 #X msg 101 -54 load;
 #X msg 100 -32 laod movs/dance1.txt;
 #X msg 99 -8 load movs/dance2.txt;
 #X msg 100 14 load movs/dance3.txt;
 #X obj 236 -43 topos.rel.pointRegion rel ske/1/l_hand LH 0.1;
-#X floatatom 688 159 5 0 0 0 - - -;
-#X floatatom 643 158 5 0 0 0 - - -;
-#X obj 489 136 spigot;
-#X obj 522 107 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X floatatom 689 177 5 0 0 0 - - -;
+#X floatatom 644 176 5 0 0 0 - - -;
+#X obj 493 167 spigot;
+#X obj 526 112 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 548 42 Record param;
-#X text 441 86 Send back param.;
+#X text 543 43 Record param;
+#X text 439 91 Send back param.;
 #X text 367 214 Synthesis parameter: MIDI NOTE \, VELOCITY \, Additive
 synthesis magnitudes;
+#X obj 309 28 route distanceFrom collision;
+#X obj 487 -86 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X text 490 -86 2;
+#X obj 47 -83 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X obj 218 100 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X text 221 100 3;
+#X text 50 -83 1;
+#X obj 208 233 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X text 211 233 4;
+#X obj 517 63 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X text 520 63 5;
+#X obj 219 123 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X text 222 123 6;
+#X obj 505 113 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X text 508 112 7;
+#X obj 661 134 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
+0;
+#X obj 767 51 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
+0;
+#X obj 528 -39 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
+0;
+#X text 8 -130 DEMO 9;
 #X connect 0 0 1 0;
 #X connect 0 0 1 1;
-#X connect 0 1 41 0;
-#X connect 0 1 42 1;
+#X connect 0 1 40 0;
+#X connect 0 1 41 2;
 #X connect 6 0 11 0;
 #X connect 7 0 11 0;
 #X connect 9 0 11 0;
@@ -270,31 +298,31 @@ synthesis magnitudes;
 #X connect 14 0 15 0;
 #X connect 16 0 15 2;
 #X connect 17 0 16 0;
-#X connect 19 0 47 0;
+#X connect 19 0 46 0;
 #X connect 20 0 0 0;
 #X connect 21 0 20 0;
 #X connect 23 0 20 1;
 #X connect 24 0 0 1;
-#X connect 25 0 24 0;
-#X connect 29 0 42 0;
-#X connect 30 0 29 0;
-#X connect 31 0 42 0;
-#X connect 32 0 42 0;
-#X connect 33 0 34 0;
-#X connect 33 1 35 0;
-#X connect 34 0 32 0;
-#X connect 36 0 33 0;
-#X connect 37 0 38 0;
-#X connect 37 1 39 0;
-#X connect 42 0 37 0;
-#X connect 42 0 50 0;
-#X connect 42 1 49 0;
-#X connect 42 2 48 0;
+#X connect 28 0 41 0;
+#X connect 29 0 28 0;
+#X connect 30 0 41 0;
+#X connect 31 0 41 0;
+#X connect 32 0 33 0;
+#X connect 32 1 34 0;
+#X connect 33 0 31 0;
+#X connect 35 0 32 0;
+#X connect 36 0 37 0;
+#X connect 36 1 38 0;
+#X connect 41 0 36 0;
+#X connect 41 0 49 0;
+#X connect 41 1 48 0;
+#X connect 41 2 47 0;
+#X connect 42 0 11 0;
 #X connect 43 0 11 0;
 #X connect 44 0 11 0;
 #X connect 45 0 11 0;
-#X connect 46 0 11 0;
-#X connect 47 1 25 0;
-#X connect 47 1 36 0;
-#X connect 50 0 0 0;
-#X connect 51 0 50 1;
+#X connect 46 1 35 0;
+#X connect 46 1 54 0;
+#X connect 49 0 0 0;
+#X connect 50 0 49 1;
+#X connect 54 0 24 0;

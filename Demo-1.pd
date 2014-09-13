@@ -1,4 +1,4 @@
-#N canvas 195 320 841 411 10;
+#N canvas 195 320 880 399 10;
 #X declare -path toposLib;
 #X declare -lib mrpeach;
 #X declare -lib mrpeach;
@@ -45,19 +45,18 @@
 #X obj 298 190 udpreceive 12345;
 #X obj 13 9 cnv 15 500 35 empty empty empty 20 12 0 14 -261234 -66577
 0;
-#X text 18 9 Receive data and visualize skeleton;
-#X obj 531 79 topos.gemwin;
+#X obj 558 82 topos.gemwin;
 #X text 636 6 Add toposLib to the path:;
 #X text 15 145 Receives data from OSCELETON;
 #X obj 16 157 pddplink https://github.com/Sensebloom/OSCeleton;
 #X text 291 144 Receives data from SYNAPSE;
-#X text 538 56 Here you control the GEM window:;
+#X text 565 59 Here you control the GEM window:;
 #X obj 292 156 pddplink http://synapsekinect.tumblr.com/;
 #X obj 522 323 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
 0;
-#X obj 507 81 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
+#X obj 534 64 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
 0;
-#X text 511 80 1;
+#X text 536 63 1;
 #X obj 205 232 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
 0;
 #X obj 251 323 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
@@ -69,13 +68,20 @@
 #X text 696 181 3;
 #X text 422 229 2;
 #X text 209 231 2;
-#X text 293 346 topos.synapse2skeleton sometimes need to be switched
+#X text 213 354 topos.synapse2skeleton sometimes need to be switched
 on and off. Try to start it with the kinect and synapse on.;
 #X obj 598 324 topos.skeleton 1;
 #X text 11 56 The applications OSCELETON and SYNAPSE make the bridge
 between the Kinect sensor and PD via OSC protocol. The following objects
 receive and broadcast the inforamtion to the object [topos.skeleton]
 \, which privides the visualization of the skeleton.;
+#X text 561 124 object [topos.gemwin];
+#X obj 706 324 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
+0;
+#X text 600 354 The object [topos.skeleton] draws the information as
+a visible skeleton;
+#X text 17 27 Receives data and visualizes skeleton;
+#X text 19 11 DEMO 1;
 #X connect 0 0 6 0;
 #X connect 1 0 0 0;
 #X connect 1 1 0 1;
@@ -84,7 +90,7 @@ receive and broadcast the inforamtion to the object [topos.skeleton]
 #X connect 4 0 5 0;
 #X connect 5 0 6 0;
 #X connect 8 0 6 0;
-#X connect 9 0 46 0;
+#X connect 9 0 45 0;
 #X connect 10 0 9 1;
 #X connect 10 0 9 2;
 #X connect 10 0 9 3;
