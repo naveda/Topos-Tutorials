@@ -13,7 +13,7 @@
 ;
 #X msg 332 76 debug alpha 0.5;
 #X text 438 128 You can use external data or...;
-#X text 456 173 <- specify it as an argument;
+#X text 492 165 <- specify it as an argument;
 #X text 331 107 Point 1;
 #X text 373 152 Point 2;
 #X text 323 -27 Debug shows the line representing the geometry between
@@ -21,21 +21,21 @@ the two points;
 #X obj 296 299 route instability;
 #X obj 197 340 route sumVelocity;
 #X obj 394 251 route 3dAngle;
-#X obj 498 204 route 3dDistance;
+#X obj 481 206 route 3dDistance;
 #X floatatom 299 323 5 0 0 0 - - -;
 #X floatatom 397 271 5 0 0 0 - - -;
-#X floatatom 497 223 5 0 0 0 - - -;
+#X floatatom 480 225 5 0 0 0 - - -;
 #X floatatom 202 361 5 0 0 0 - - -;
-#X text 609 203 Distance between points;
-#X obj 639 6 r ske/1/l_hand;
-#X obj 583 65 topos.geo.displacement;
-#X floatatom 584 88 5 0 0 0 - - -;
-#X floatatom 734 91 5 0 0 0 - - -;
-#X obj 732 66 topos.geo.velocity 50;
+#X text 592 205 Distance between points;
+#X obj 670 29 r ske/1/l_hand;
+#X obj 732 73 topos.geo.displacement;
+#X floatatom 733 96 5 0 0 0 - - -;
+#X floatatom 731 151 5 0 0 0 - - -;
+#X obj 729 126 topos.geo.velocity 50;
 #X obj 227 172 topos.geo.2 geo2 ske/1/l_hand ske/1/r_hand;
 #X text 408 295 Instability level (arbitrary magnitude). Takes into
 account angle and size (weight) of the segment.;
-#X msg 636 43 reset;
+#X msg 785 51 reset;
 #X obj 520 -92 declare -path toposLib;
 #X obj 11 -93 cnv 15 500 35 empty empty empty 20 12 0 14 -261234 -66577
 0;
@@ -51,7 +51,7 @@ account angle and size (weight) of the segment.;
 ;
 #X text 45 285 Creates the point cloud:;
 #X text 30 224 Draws the skeleton:;
-#X text 19 -93 Extractiong features from two 3D points;
+#X text 16 -76 Extractiong features from two 3D points;
 #X text 485 247 computes the angle (radian) between both incoming vectors
 (based on Mtl library);
 #X msg 73 0 play;
@@ -63,8 +63,29 @@ account angle and size (weight) of the segment.;
 #X msg 99 33 load movs/dance1.txt;
 #X msg 98 57 load movs/dance2.txt;
 #X msg 99 79 load movs/dance3.txt;
-#X obj 17 -19 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 17 -19 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
+#X obj 44 -24 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X obj 300 3 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
+0;
+#X text 47 -25 1;
+#X text 15 -93 DEMO 5;
+#X obj 494 -50 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X text 497 -51 2;
+#X obj 392 10 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X text 395 9 3;
+#X obj 226 -10 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
+0;
+#X obj 391 104 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
+0;
+#X obj 321 236 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
+0;
+#X obj 647 29 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
+0;
+#X text 576 6 Get movement descriptors from a single point:;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
