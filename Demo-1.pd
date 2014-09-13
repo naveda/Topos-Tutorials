@@ -1,0 +1,105 @@
+#N canvas 195 320 841 411 10;
+#X declare -path toposLib;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X obj 25 243 pipelist;
+#X obj 25 221 unpackOSC;
+#X obj 24 193 udpreceive 7110;
+#X msg 160 241 body;
+#X obj 181 279 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 179 300 onOff \$1;
+#X obj 24 324 topos.osceleton2skeleton body 4;
+#X obj 653 24 declare -path toposLib;
+#X msg 159 214 world;
+#X obj 599 294 scaleXYZ;
+#X floatatom 629 270 5 0 0 0 - - -;
+#X obj 600 248 translateXYZ;
+#X obj 298 239 pipelist;
+#X obj 298 215 unpackOSC;
+#X obj 464 276 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 458 300 onOff \$1;
+#X msg 377 216 body;
+#X msg 378 238 world;
+#X obj 294 322 topos.synapse2skeleton body 3 1;
+#X floatatom 646 228 3 0 0 0 - - -;
+#X floatatom 669 227 3 0 0 0 - - -;
+#X floatatom 624 228 3 0 0 0 - - -;
+#X obj 598 180 gemhead;
+#X obj 599 205 rotateXYZ;
+#X floatatom 655 180 5 0 0 0 - - -;
+#X obj 298 190 udpreceive 12345;
+#X obj 13 9 cnv 15 500 35 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X text 18 9 Receive data and visualize skeleton;
+#X obj 531 79 topos.gemwin;
+#X text 636 6 Add toposLib to the path:;
+#X text 15 145 Receives data from OSCELETON;
+#X obj 16 157 pddplink https://github.com/Sensebloom/OSCeleton;
+#X text 291 144 Receives data from SYNAPSE;
+#X text 538 56 Here you control the GEM window:;
+#X obj 292 156 pddplink http://synapsekinect.tumblr.com/;
+#X obj 522 323 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
+0;
+#X obj 507 81 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X text 511 80 1;
+#X obj 205 232 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X obj 251 323 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
+0;
+#X obj 418 230 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X obj 692 182 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X text 696 181 3;
+#X text 422 229 2;
+#X text 209 231 2;
+#X text 293 346 topos.synapse2skeleton sometimes need to be switched
+on and off. Try to start it with the kinect and synapse on.;
+#X obj 598 324 topos.skeleton 1;
+#X text 11 56 The applications OSCELETON and SYNAPSE make the bridge
+between the Kinect sensor and PD via OSC protocol. The following objects
+receive and broadcast the inforamtion to the object [topos.skeleton]
+\, which privides the visualization of the skeleton.;
+#X connect 0 0 6 0;
+#X connect 1 0 0 0;
+#X connect 1 1 0 1;
+#X connect 2 0 1 0;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 8 0 6 0;
+#X connect 9 0 46 0;
+#X connect 10 0 9 1;
+#X connect 10 0 9 2;
+#X connect 10 0 9 3;
+#X connect 11 0 9 0;
+#X connect 12 0 18 0;
+#X connect 13 0 12 0;
+#X connect 13 1 12 1;
+#X connect 14 0 15 0;
+#X connect 15 0 18 0;
+#X connect 16 0 18 0;
+#X connect 17 0 18 0;
+#X connect 19 0 11 2;
+#X connect 20 0 11 3;
+#X connect 21 0 11 1;
+#X connect 22 0 23 0;
+#X connect 23 0 11 0;
+#X connect 24 0 23 2;
+#X connect 25 0 13 0;

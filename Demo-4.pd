@@ -1,0 +1,126 @@
+#N canvas 508 249 868 679 10;
+#X declare -path toposLib;
+#X declare -path mtl;
+#X declare -path mtl;
+#X declare -lib iem_tab;
+#X declare -lib iem_tab;
+#X floatatom 391 -21 5 0 0 0 - - -;
+#X obj 287 10 route volume;
+#X obj 286 53 route xyzRange;
+#X floatatom 288 33 5 0 0 0 - - -;
+#X obj 304 78 pddp/print;
+#X obj 303 220 pddp/print;
+#X obj 293 196 route meanPosition;
+#X floatatom 291 128 5 0 0 0 - - -;
+#X obj 290 105 route displacement;
+#X floatatom 292 172 5 0 0 0 - - -;
+#X obj 291 149 route speed;
+#X obj 304 276 pddp/print;
+#X obj 293 251 route inPoints;
+#X obj 282 531 pddp/print;
+#X obj 282 509 route getPosPoint;
+#X msg 237 -49 getPosPoint 5;
+#X floatatom 294 327 5 0 0 0 - - -;
+#X obj 294 303 route centerPointsAvr;
+#X obj 292 358 route centerPointsStd;
+#X floatatom 292 381 5 0 0 0 - - -;
+#X obj 297 433 pddp/print;
+#X obj 284 409 route centerPointsDist;
+#X obj 522 -99 declare -path toposLib;
+#X obj 13 -100 cnv 15 500 35 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X obj 522 -76 topos.gemwin;
+#N canvas 1326 77 532 361 init 1;
+#X obj 33 89 s toposrec/all/messages;
+#X msg 33 59 loop 1;
+#X obj 33 34 loadbang;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X restore 726 -96 pd init;
+#X text 19 -100 Extracting features;
+#X text 394 12 volume: total volume (f) of the bounding rectangular
+parallelepiped;
+#X text 396 58 xyzRange: range of each dimension (f f f);
+#X text 435 198 meanPosition: mean position of the topology (f f f)
+;
+#X text 441 250 inPoints: actual 3d point projected onto the topology
+;
+#X text 282 460 getPosPoint: when the message [getPosition N( is sent
+to the 1st inlet \, the abstraction returns the positon of the N point
+in the topology;
+#X text 445 309 centerPointsAvr: Average distance between all points
+and the centroid of the topology;
+#X text 448 362 centerPointsStd: Standard deviation of the distance
+between all points and the centroid of the topology.;
+#X text 449 401 centerPointsDista: Distancesbetween each point and
+their mean.;
+#X text 434 103 speed: accumulative displacement of the point cloud
+;
+#X text 434 152 speed: instantaneous velocity of the point cloud;
+#X text 432 -25 The third argument sends the feature to the second
+inlet for fast prototyping;
+#X obj 76 84 cnv 15 25 150 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X obj 88 275 cnv 15 25 150 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X msg 21 -32 play;
+#X msg 59 -33 stop;
+#X floatatom 21 116 5 0 0 0 - - -;
+#X msg 97 -12 loop \$1;
+#X obj 98 -31 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 81 62 pp load;
+#X obj 80 39 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 166 -7 ex1.txt;
+#X msg 166 16 ex2.txt;
+#X obj 20 92 topos.rec 1;
+#X msg 167 39 ex1.txt;
+#X msg 167 62 ex2.txt;
+#X obj -4 172 topos.skeleton 1;
+#X obj -5 149 gemhead;
+#X obj -4 209 separator;
+#X obj -4 231 topos LH ske/1/l_hand 100 10;
+#X obj 50 331 topos LINK test 100 10;
+#X text 101 135 <- Symbolic link;
+#X text 119 359 <- Symbolic link;
+#X text 101 153 between topos and skeleton;
+#X text 104 371 between topos and features;
+#X obj 238 -19 topos.features LH speed;
+#X obj -2 387 topos.features LINK speed;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 6 0 5 0;
+#X connect 8 0 7 0;
+#X connect 10 0 9 0;
+#X connect 12 0 11 0;
+#X connect 14 0 13 0;
+#X connect 15 0 61 0;
+#X connect 17 0 16 0;
+#X connect 18 0 19 0;
+#X connect 21 0 20 0;
+#X connect 40 0 49 0;
+#X connect 41 0 49 0;
+#X connect 43 0 49 0;
+#X connect 44 0 43 0;
+#X connect 45 0 49 0;
+#X connect 46 0 45 0;
+#X connect 47 0 45 0;
+#X connect 48 0 45 0;
+#X connect 49 0 42 0;
+#X connect 50 0 45 0;
+#X connect 51 0 45 0;
+#X connect 52 0 54 0;
+#X connect 53 0 52 0;
+#X connect 54 0 55 0;
+#X connect 61 0 1 0;
+#X connect 61 0 2 0;
+#X connect 61 0 6 0;
+#X connect 61 0 8 0;
+#X connect 61 0 10 0;
+#X connect 61 0 12 0;
+#X connect 61 0 14 0;
+#X connect 61 0 17 0;
+#X connect 61 0 18 0;
+#X connect 61 0 21 0;
+#X connect 61 1 0 0;

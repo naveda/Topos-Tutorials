@@ -1,0 +1,222 @@
+#N canvas 56 340 871 641 10;
+#X declare -path toposLib;
+#X declare -path mtl;
+#X msg 17 5 play;
+#X msg 55 4 stop;
+#X floatatom 17 153 5 0 0 0 - - -;
+#X msg 93 25 loop \$1;
+#X obj 94 6 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 77 99 pp load;
+#X obj 82 76 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 338 -23 gemhead;
+#X msg 562 177 freeze \$1;
+#X obj 562 158 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 162 30 ex1.txt;
+#X msg 162 53 ex2.txt;
+#X obj 275 102 translateXYZ;
+#X floatatom 297 83 5 0 0 0 - - -;
+#X obj 419 47 separator;
+#X obj 275 56 separator;
+#X obj 419 91 translateXYZ;
+#X floatatom 441 72 5 0 0 0 - - -;
+#X obj 159 180 ppp;
+#X obj 490 139 r ske/1/l_hand;
+#X obj 275 129 topos.skeleton 1;
+#N canvas 1110 275 693 468 change 0;
+#X obj 18 415 outlet;
+#X msg 141 260 draw control_line;
+#X msg 140 283 draw control_fill;
+#N canvas 422 256 438 311 more 0;
+#X msg 57 40 draw line;
+#X msg 57 20 draw fill;
+#X msg 57 60 draw point;
+#X msg 74 165 width 1;
+#X msg 74 186 width 4;
+#X msg 57 81 draw line1;
+#X msg 57 102 draw line2;
+#X msg 57 123 draw line3;
+#X msg 57 144 draw line4;
+#X msg 195 34 draw control_line;
+#X msg 195 55 draw control_line1;
+#X msg 195 76 draw control_line2;
+#X msg 195 97 draw control_fill;
+#X msg 195 118 draw control_point;
+#X obj 28 209 outlet;
+#X obj 162 208 any;
+#X text 149 -45 draw style;
+#X text 63 -13 draw the curve;
+#X text 217 2 of the curve;
+#X text 204 -12 draw control point;
+#X connect 0 0 14 0;
+#X connect 1 0 14 0;
+#X connect 3 0 14 0;
+#X connect 4 0 14 0;
+#X connect 5 0 14 0;
+#X connect 6 0 14 0;
+#X connect 7 0 14 0;
+#X connect 8 0 14 0;
+#X connect 9 0 15 0;
+#X connect 10 0 15 0;
+#X connect 11 0 15 0;
+#X connect 12 0 15 0;
+#X connect 13 0 15 0;
+#X connect 15 0 14 0;
+#X restore 140 305 pd more visualizations;
+#X msg 129 16 points 10;
+#X msg 139 182 color 1 0 0;
+#X msg 128 -9 sampling 100;
+#X text 258 87 set point to f f f position:;
+#X text 262 102 usage: on/off point x y z;
+#X text 367 68 set random behaviour [0-1];
+#X msg 140 234 scale 1 1 1;
+#X text 245 232 scale topology by x y z factors;
+#X text 120 -29 DATA CONFIGURATION:;
+#X text 162 159 IMAGE:;
+#X text 174 335 OTHER;
+#X text 213 358 stop internal clock;
+#X text 151 45 BEHAVIOURS:;
+#X text 225 -11 sampling in ms;
+#X text 226 11 points (samples) that form the topology;
+#X text 250 120 freeze topology [1: freeze/0: free];
+#X text 241 180 Color of the surface;
+#X text 241 207 Alpha of the surface;
+#X text 231 24 more than 10 gives an error but does not crash;
+#X text 265 261 Types of drawing;
+#X text 291 300 More types;
+#X msg 144 357 metro \$1;
+#X msg 129 68 randomLevel \$1;
+#X msg 129 121 freeze \$1;
+#X obj 195 119 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 258 94 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 230 69 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 209 210 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 140 209 alpha \$1;
+#X obj 203 358 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 129 94 setPoint \$1 3 2 2 2;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
+#X connect 10 0 0 0;
+#X connect 25 0 0 0;
+#X connect 26 0 0 0;
+#X connect 27 0 0 0;
+#X connect 28 0 27 0;
+#X connect 29 0 34 0;
+#X connect 30 0 26 0;
+#X connect 31 0 32 0;
+#X connect 32 0 0 0;
+#X connect 33 0 25 0;
+#X connect 34 0 0 0;
+#X restore 569 202 pd change graphs;
+#X obj 524 -86 declare -path toposLib;
+#X obj 15 -87 cnv 15 500 35 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X obj 524 -63 topos.gemwin;
+#X msg 163 76 ex1.txt;
+#X msg 163 99 ex2.txt;
+#X text 21 -87 Creating a point cloud topology with Topos;
+#N canvas 978 360 488 443 explaining 0;
+#X text 19 42 The object topos.rec broadcasts body movements to a receive
+with the following configuration: skeleton/NUMBER/BODY_PART/messages
+data X Y Z;
+#X text 25 216 NUMBERS refer to the symbolic link between topos.rec
+and topos skeleton. Ex: [topos.rec 1] will brooadcast the body coordinates
+to [topos skeleton 1]. The number 1 is the symbolic link between the
+two objects.;
+#X text 62 342 l_hip l_knee l_foot r_hip r_knee r_foot torso neck head
+l_shoulder l_elbow l_hand r_shoulder r_elbow r_hand;
+#X obj 240 117 r skeleton/1/l_hand/messages;
+#X obj 240 139 route data;
+#X obj 242 161 unpack f f f;
+#X text 241 179 x y z;
+#X text 23 118 You can retrieve the data using:;
+#X text 26 286 BODY PARTS refer to the standard name used for each
+body part in the library. As a convention \, the following self-explanatory
+names are used in the communication of data ([l] means left and [r]
+means right):;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X restore 23 351 pd explaining sends and receives;
+#X obj 339 16 translateXYZ;
+#X floatatom 363 -3 5 0 0 0 - - -;
+#X obj 157 317 ppp;
+#X obj 157 296 r ske/1/l_hand;
+#X obj 158 262 ppp;
+#X obj 158 217 r skeleton/1/l_hand/messages;
+#X text 28 211 From topos.rec;
+#X text 29 298 From topos.skeleton;
+#X text 419 273 the [topos] object creates the point cloud: a collection
+of n 3d points from past movements that defines a region in space.
+;
+#X text 417 318 The first argument [ex:lh] is a symbolic link. The
+[topos] object will broadcast information using this link;
+#X text 486 118 In this case \, the left hand forms the point cloud
+;
+#X text 585 138 It is also settable in the second argument.;
+#X text 399 195 Gem list;
+#X text 419 358 The second argument [ex:lefthand] is a receive. Instead
+of using the second inlet for the 3d points the object can receive
+it by this link as a receive.;
+#X text 418 410 The third argument [ex:100] is the sampling period
+in ms. In the example the point cloud will be constructed from points
+sampled at every 100 ms;
+#X text 416 455 The fourth argument [ex:10] is the number of points
+of the point cloud. 10 points * 100 ms will generate a point cloud
+of 10 points refering to the last 1 s of movement (10 * 100 ms).;
+#X text 405 252 Gemlist;
+#X floatatom 489 252 5 0 0 0 - - -;
+#X floatatom 559 253 5 0 0 0 - - -;
+#N canvas 1326 77 532 361 init 0;
+#X obj 33 89 s toposrec/all/messages;
+#X msg 33 59 loop 1;
+#X obj 33 34 loadbang;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X restore 728 -83 pd init;
+#X obj 158 240 route data;
+#X obj 159 160 route l_hand;
+#X obj 16 129 topos.rec 1;
+#X obj 419 228 topos lh lefthand 100 10;
+#X connect 0 0 51 0;
+#X connect 1 0 51 0;
+#X connect 3 0 51 0;
+#X connect 4 0 3 0;
+#X connect 5 0 51 0;
+#X connect 6 0 5 0;
+#X connect 7 0 29 0;
+#X connect 8 0 52 2;
+#X connect 9 0 8 0;
+#X connect 10 0 5 0;
+#X connect 11 0 5 0;
+#X connect 12 0 20 0;
+#X connect 13 0 12 1;
+#X connect 14 0 16 0;
+#X connect 15 0 12 0;
+#X connect 16 0 52 0;
+#X connect 17 0 16 1;
+#X connect 19 0 52 1;
+#X connect 21 0 52 2;
+#X connect 25 0 5 0;
+#X connect 26 0 5 0;
+#X connect 29 0 14 0;
+#X connect 29 0 15 0;
+#X connect 30 0 29 1;
+#X connect 32 0 31 0;
+#X connect 34 0 49 0;
+#X connect 49 0 33 0;
+#X connect 50 0 18 0;
+#X connect 51 0 2 0;
+#X connect 51 1 50 0;
+#X connect 52 1 46 0;
+#X connect 52 2 47 0;

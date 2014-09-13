@@ -1,0 +1,280 @@
+#N canvas 444 117 901 394 10;
+#X declare -path toposLib;
+#X declare -path mtl;
+#X declare -lib iem_tab;
+#N canvas 791 199 563 525 synthesis 0;
+#X obj 23 2 inlet;
+#X obj 220 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 730 1;
+#X obj 232 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 717 1;
+#X obj 244 76 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 675 1;
+#X obj 254 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 706 1;
+#X obj 266 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 753 1;
+#X obj 278 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 777 1;
+#X obj 288 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 804 1;
+#X obj 300 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 799 1;
+#X obj 312 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 805 1;
+#X obj 324 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 807 1;
+#X obj 200 30 unpack f f f f f f f f f f;
+#X obj 118 164 line;
+#X obj 227 286 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 562 1;
+#X obj 118 142 pack f 100;
+#X obj 149 184 line;
+#X obj 240 285 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 532 1;
+#X obj 149 162 pack f 100;
+#X obj 184 204 line;
+#X obj 252 287 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 543 1;
+#X obj 184 182 pack f 100;
+#X obj 174 124 r \$0f;
+#X obj 206 143 r \$0f;
+#X obj 241 160 r \$0f;
+#X obj 214 226 line;
+#X obj 265 286 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 575 1;
+#X obj 214 204 pack f 100;
+#X obj 271 182 r \$0f;
+#X obj 245 247 line;
+#X obj 275 284 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 600 1;
+#X obj 245 225 pack f 100;
+#X obj 302 203 r \$0f;
+#X obj 283 155 line;
+#X obj 286 283 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 621 1;
+#X obj 283 133 pack f 100;
+#X obj 314 175 line;
+#X obj 298 283 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 626 1;
+#X obj 314 153 pack f 100;
+#X obj 349 195 line;
+#X obj 310 283 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 633 1;
+#X obj 349 173 pack f 100;
+#X obj 339 115 r \$0f;
+#X obj 371 134 r \$0f;
+#X obj 406 151 r \$0f;
+#X obj 379 217 line;
+#X obj 322 283 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 640 1;
+#X obj 379 195 pack f 100;
+#X obj 436 173 r \$0f;
+#X obj 410 238 line;
+#X obj 337 283 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 629 1;
+#X obj 410 216 pack f 100;
+#X obj 467 194 r \$0f;
+#X obj 208 355 pack f f f f f f f f f f;
+#X text 438 120 Smoothing;
+#X obj 27 492 outlet~;
+#X obj 94 461 ead~ 10 7000;
+#X obj 28 460 *~;
+#X obj 400 411 inlet;
+#X obj 449 420 inlet;
+#X obj 29 54 t a b;
+#X obj 195 5 inlet;
+#X obj 96 484 lop~ 5;
+#X obj 29 399 private/mtl/instrument~ 10 additive~ 0 0 0 0 0 0 0 0
+0 0;
+#X connect 0 0 59 0;
+#X connect 1 0 14 0;
+#X connect 2 0 17 0;
+#X connect 3 0 20 0;
+#X connect 4 0 26 0;
+#X connect 5 0 30 0;
+#X connect 6 0 34 0;
+#X connect 7 0 37 0;
+#X connect 8 0 40 0;
+#X connect 9 0 46 0;
+#X connect 10 0 50 0;
+#X connect 11 0 1 0;
+#X connect 11 1 2 0;
+#X connect 11 2 3 0;
+#X connect 11 3 4 0;
+#X connect 11 4 5 0;
+#X connect 11 5 6 0;
+#X connect 11 6 7 0;
+#X connect 11 7 8 0;
+#X connect 11 8 9 0;
+#X connect 11 9 10 0;
+#X connect 12 0 13 0;
+#X connect 13 0 52 0;
+#X connect 14 0 12 0;
+#X connect 15 0 16 0;
+#X connect 16 0 52 1;
+#X connect 17 0 15 0;
+#X connect 18 0 19 0;
+#X connect 19 0 52 2;
+#X connect 20 0 18 0;
+#X connect 21 0 14 1;
+#X connect 23 0 20 1;
+#X connect 24 0 25 0;
+#X connect 25 0 52 3;
+#X connect 26 0 24 0;
+#X connect 27 0 26 1;
+#X connect 28 0 29 0;
+#X connect 29 0 52 4;
+#X connect 30 0 28 0;
+#X connect 31 0 30 1;
+#X connect 32 0 33 0;
+#X connect 33 0 52 5;
+#X connect 34 0 32 0;
+#X connect 35 0 36 0;
+#X connect 36 0 52 6;
+#X connect 37 0 35 0;
+#X connect 38 0 39 0;
+#X connect 39 0 52 7;
+#X connect 40 0 38 0;
+#X connect 41 0 34 1;
+#X connect 43 0 40 1;
+#X connect 44 0 45 0;
+#X connect 45 0 52 8;
+#X connect 46 0 44 0;
+#X connect 47 0 46 1;
+#X connect 48 0 49 0;
+#X connect 49 0 52 9;
+#X connect 50 0 48 0;
+#X connect 51 0 50 1;
+#X connect 52 0 62 1;
+#X connect 55 0 61 0;
+#X connect 56 0 54 0;
+#X connect 57 0 55 1;
+#X connect 58 0 55 2;
+#X connect 59 0 62 0;
+#X connect 59 1 55 0;
+#X connect 60 0 11 0;
+#X connect 61 0 56 1;
+#X connect 62 0 56 0;
+#X restore 310 188 pd synthesis;
+#X obj 297 216 output~;
+#X obj 513 -131 declare -path toposLib;
+#X obj 4 -132 cnv 15 500 35 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X obj 513 -108 topos.gemwin;
+#N canvas 1326 78 532 361 init 0;
+#X obj 33 89 s toposrec/all/messages;
+#X msg 33 59 loop 1;
+#X obj 33 34 loadbang;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X restore 717 -128 pd init;
+#X obj 5 131 topos.skeleton 1;
+#X obj 4 108 gemhead;
+#X obj 5 168 separator;
+#X obj 5 190 topos LH ske/1/l_hand 100 10;
+#X msg 169 163 freeze \$1;
+#X obj 169 143 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 4 88 FEATURE DETECTION;
+#X obj 250 -39 topos.rel.pointRegion rel ske/1/r_hand LH 0.1;
+#X obj 249 -72 gemhead;
+#N canvas 735 483 450 300 note 0;
+#X obj 56 31 inlet;
+#X obj 64 207 pack f 100;
+#X obj 64 229 outlet;
+#X msg 139 131 0 2 4 7 9 12 14 16 19 21 22;
+#X obj 55 92 random 10;
+#X obj 64 156 list-nth;
+#X obj 66 183 + 48;
+#X obj 135 21 inlet;
+#X obj 136 102 t b f b;
+#X obj 55 69 metro 500;
+#X obj 108 45 f 500;
+#X connect 0 0 9 0;
+#X connect 1 0 2 0;
+#X connect 3 0 5 0;
+#X connect 4 0 8 0;
+#X connect 5 0 6 0;
+#X connect 6 0 1 0;
+#X connect 7 0 10 1;
+#X connect 8 0 3 0;
+#X connect 8 1 5 1;
+#X connect 8 2 10 0;
+#X connect 9 0 4 0;
+#X connect 10 0 9 1;
+#X restore 279 163 pd note generator;
+#X obj 277 142 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 308 141 metro time;
+#X obj 376 143 * 1000;
+#X obj 384 55 list-math * 0.1;
+#X floatatom 429 145 5 0 0 0 - - -;
+#X floatatom 479 147 5 0 0 0 - - -;
+#X text 428 129 attack;
+#X text 479 129 decay;
+#X obj 382 1 route distanceFrom collision;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array array1 10 float 3;
+#A 0 0.183843 0.17297 0.181083 0.193075 0.199179 0.206085 0.204786
+0.206308 0.207006 0.187123;
+#X coords 0 0 10 1 150 90 1 0 0;
+#X restore 585 158 graph;
+#X obj 628 85 list-enumerate;
+#X obj 628 132 tabwrite array1;
+#X obj 631 110 unpack f f;
+#X text 543 27 Distances from Right hand to all 10 points of the point
+cloud;
+#X text 234 72 SYNTHESIS;
+#X text 435 -15 MAPPING;
+#X text 120 139 Try it:;
+#X obj 385 30 list-math - 0.1;
+#X floatatom 489 34 5 0 0 0 - - -;
+#X floatatom 489 56 5 0 0 0 - - -;
+#X text 10 -132 Applications: mapping [Topos.features] to a FM synthesis
+;
+#X floatatom 378 121 5 0 0 0 - - -;
+#X msg 74 -72 play;
+#X msg 119 -72 stop;
+#X floatatom 9 54 5 0 0 0 - - -;
+#X msg 16 -72 loop \$1;
+#X obj 8 30 topos.rec 1;
+#X msg 25 -46 load;
+#X msg 100 -39 load movs/dance1.txt;
+#X msg 99 -15 load movs/dance2.txt;
+#X msg 100 7 load movs/dance3.txt;
+#X obj 19 -92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 8 0 9 0;
+#X connect 10 0 9 2;
+#X connect 11 0 10 0;
+#X connect 13 1 24 0;
+#X connect 14 0 13 0;
+#X connect 15 0 0 0;
+#X connect 16 0 15 0;
+#X connect 18 0 15 1;
+#X connect 19 0 0 1;
+#X connect 19 0 26 0;
+#X connect 20 0 0 2;
+#X connect 21 0 0 3;
+#X connect 24 0 33 0;
+#X connect 26 0 28 0;
+#X connect 28 0 27 1;
+#X connect 28 1 27 0;
+#X connect 33 0 19 0;
+#X connect 34 0 33 1;
+#X connect 35 0 19 1;
+#X connect 37 0 18 0;
+#X connect 38 0 42 0;
+#X connect 39 0 42 0;
+#X connect 41 0 42 0;
+#X connect 42 0 40 0;
+#X connect 43 0 42 0;
+#X connect 44 0 42 0;
+#X connect 45 0 42 0;
+#X connect 46 0 42 0;
+#X connect 47 0 41 0;

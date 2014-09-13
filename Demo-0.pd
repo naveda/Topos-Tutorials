@@ -1,0 +1,56 @@
+#N canvas 400 313 847 436 10;
+#X declare -path toposLib;
+#X obj 15 -17 cnv 15 500 35 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X text 18 23 The Topos library is a library of Pure Data abstractions
+that help to visuzalize \, manage and analyze human movement data captured
+by motion capture devices.;
+#X text 520 -17 Important links:;
+#X obj 521 29 pddplink https://github.com/Sensebloom/OSCeleton;
+#X obj 523 52 pddplink http://synapsekinect.tumblr.com/;
+#X obj 522 8 pddplink http://naveda.info;
+#X obj 526 71 pddplink http://www.xbox.com/en-US/kinect;
+#X text 20 242 The following elements will help you to navigate throught
+the demos:;
+#X obj 29 300 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
+0;
+#X text 48 282 Indicates the steps of the demo;
+#X obj 29 279 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X text 47 304 Indicates the important elements;
+#X obj 446 242 declare -path toposLib;
+#X text 19 70 PRE-REQUISITES;
+#X text 37 155 Although the objects are simple \, a basic knowledge
+of PD programming is required. Some objects in the library behave like
+GEM objects (see links) and a basic knowledge of GEM is recommended.
+;
+#X text 445 181 You can use this object to make the Topos Lib. available
+in your patch by placing the folder with the library in the folder
+of you patch and placing the following object elsewhere:;
+#X obj 444 270 pddplink hhttp://puredata.info/docs/faq/how-do-i-install-externals-and-help-files
+-text More? See How to install externals?;
+#X text 35 94 For the demos 1 and 2 you may need a sensor KINECT to
+understand and experiment all the features. For the other demos there
+are files containing recorded movement sections that allow the understanding
+of the concepts.;
+#X text 22 -17 Things you should know before starting with the demos:
+;
+#N canvas 496 267 463 250 META 0;
+#X text -121 100 INLET_1 floats (3);
+#X text -121 120 INLET_2 floats (3);
+#X text -118 143 OUTLET_0 features;
+#X text -120 186 WEBSITE http://naveda.info;
+#X text -120 205 HELP_PATCH_AUTHORS "pd meta" information added by
+Luiz Naveda for 0.43.4-extended;
+#X text -121 80 INLET_0 gemlist and control;
+#X text -123 6 KEYWORDS;
+#X text -123 26 LICENSE GPL V3;
+#X text -123 46 DESCRIPTION;
+#X text 82 117 comment;
+#X text -116 166 AUTHOR Luiz Naveda <luiznaveda@gmail.com>;
+#X restore 736 -15 pd META;
+#X text 32 352 (C) Copyright 2014 Luiz Naveda;
+#X text 36 387 Brazil;
+#X text 34 370 luiznaveda@gmail.com;
+#X obj 350 372 pddplink https://www.jyu.fi/hum/laitokset/musiikki/en/research/coe/materials/mocaptoolbox
+;
