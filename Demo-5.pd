@@ -9,7 +9,7 @@
 #X obj 332 126 r ske/1/l_hand;
 #X msg 332 51 debug lineParameters color 0 0 0;
 #X msg 333 26 debug \$1;
-#X obj 332 7 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 332 7 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X msg 332 76 debug alpha 0.5;
 #X text 438 128 You can use external data or...;
@@ -19,23 +19,23 @@
 #X text 323 -27 Debug shows the line representing the geometry between
 the two points;
 #X obj 296 299 route instability;
-#X obj 197 340 route sumVelocity;
+#X obj 197 344 route sumVelocity;
 #X obj 394 251 route 3dAngle;
 #X obj 481 206 route 3dDistance;
 #X floatatom 299 323 5 0 0 0 - - -;
 #X floatatom 397 271 5 0 0 0 - - -;
 #X floatatom 480 225 5 0 0 0 - - -;
-#X floatatom 202 361 5 0 0 0 - - -;
+#X floatatom 202 365 5 0 0 0 - - -;
 #X text 592 205 Distance between points;
 #X obj 670 29 r ske/1/l_hand;
-#X obj 732 73 topos.geo.displacement;
-#X floatatom 733 96 5 0 0 0 - - -;
+#X obj 727 73 topos.geo.displacement;
+#X floatatom 728 96 5 0 0 0 - - -;
 #X floatatom 731 151 5 0 0 0 - - -;
 #X obj 729 126 topos.geo.velocity 50;
 #X obj 227 172 topos.geo.2 geo2 ske/1/l_hand ske/1/r_hand;
 #X text 408 295 Instability level (arbitrary magnitude). Takes into
 account angle and size (weight) of the segment.;
-#X msg 785 51 reset;
+#X msg 785 50 reset;
 #X obj 520 -92 declare -path toposLib;
 #X obj 11 -93 cnv 15 500 35 empty empty empty 20 12 0 14 -261234 -66577
 0;
@@ -85,7 +85,7 @@ account angle and size (weight) of the segment.;
 0;
 #X obj 647 29 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
 0;
-#X text 576 6 Get movement descriptors from a single point:;
+#X text 576 6 Get movement descriptors of a single point:;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;

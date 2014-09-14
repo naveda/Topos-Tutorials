@@ -1,4 +1,4 @@
-#N canvas 195 320 880 399 10;
+#N canvas 195 320 904 393 10;
 #X declare -path toposLib;
 #X declare -lib mrpeach;
 #X declare -lib mrpeach;
@@ -68,20 +68,34 @@
 #X text 696 181 3;
 #X text 422 229 2;
 #X text 209 231 2;
-#X text 213 354 topos.synapse2skeleton sometimes need to be switched
+#X text 179 347 topos.synapse2skeleton sometimes need to be switched
 on and off. Try to start it with the kinect and synapse on.;
 #X obj 598 324 topos.skeleton 1;
-#X text 11 56 The applications OSCELETON and SYNAPSE make the bridge
-between the Kinect sensor and PD via OSC protocol. The following objects
-receive and broadcast the inforamtion to the object [topos.skeleton]
-\, which privides the visualization of the skeleton.;
+#X text 14 55 The applications OSCELETON and SYNAPSE work as a bridge
+between the Kinect sensor and PD (using OSC protocols). The following
+objects receive and broadcast the information to the object [topos.skeleton]
+\, which provides the visualisation of a skeleton.;
 #X text 561 124 object [topos.gemwin];
 #X obj 706 324 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
 0;
-#X text 600 354 The object [topos.skeleton] draws the information as
+#X text 569 348 The object [topos.skeleton] draws the information as
 a visible skeleton;
 #X text 17 27 Receives data and visualizes skeleton;
 #X text 19 11 DEMO 1;
+#N canvas 496 267 463 250 META 0;
+#X text -121 100 INLET_1 floats (3);
+#X text -121 120 INLET_2 floats (3);
+#X text -118 143 OUTLET_0 features;
+#X text -120 186 WEBSITE http://naveda.info;
+#X text -120 205 HELP_PATCH_AUTHORS "pd meta" information added by
+Luiz Naveda for 0.43.4-extended;
+#X text -121 80 INLET_0 gemlist and control;
+#X text -123 6 KEYWORDS;
+#X text -123 26 LICENSE GPL V3;
+#X text -123 46 DESCRIPTION;
+#X text 82 117 comment;
+#X text -116 166 AUTHOR Luiz Naveda <luiznaveda@gmail.com>;
+#X restore 799 0 pd META;
 #X connect 0 0 6 0;
 #X connect 1 0 0 0;
 #X connect 1 1 0 1;

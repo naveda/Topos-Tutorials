@@ -36,27 +36,23 @@
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
 #X restore 726 -96 pd init;
-#X text 464 22 volume: total volume (f) of the bounding rectangular
+#X text 442 16 volume: total volume (f) of the bounding rectangular
 parallelepiped;
-#X text 466 68 xyzRange: range of each dimension (f f f);
-#X text 505 208 meanPosition: mean position of the topology (f f f)
+#X text 455 63 xyzRange: range of each dimension (f f f);
+#X text 489 208 meanPosition: mean position of the topology (f f f)
 ;
 #X text 511 260 inPoints: actual 3d point projected onto the topology
 ;
 #X text 352 470 getPosPoint: when the message [getPosition N( is sent
 to the 1st inlet \, the abstraction returns the positon of the N point
 in the topology;
-#X text 515 319 centerPointsAvr: Average distance between all points
+#X text 513 310 centerPointsAvr: Average distance between all points
 and the centroid of the topology;
-#X text 518 372 centerPointsStd: Standard deviation of the distance
+#X text 514 365 centerPointsStd: Standard deviation of the distance
 between all points and the centroid of the topology.;
-#X text 519 411 centerPointsDista: Distancesbetween each point and
+#X text 513 411 centerPointsDist: Distances between each point and
 their mean.;
-#X text 504 113 speed: accumulative displacement of the point cloud
-;
-#X text 504 162 speed: instantaneous velocity of the point cloud;
-#X text 502 -15 The third argument sends the feature to the second
-inlet for fast prototyping;
+#X text 459 159 speed: instantaneous velocity of the point cloud;
 #X obj 99 252 cnv 15 25 150 empty empty empty 20 12 0 14 -261234 -66577
 0;
 #X text 171 145 <- Symbolic link;
@@ -100,10 +96,17 @@ inlet for fast prototyping;
 #X obj 65 159 gemhead;
 #X obj 66 227 separator;
 #X obj 66 249 topos LH ske/1/l_hand 100 10;
-#X obj 12 346 topos.features LH speed;
+#X obj 15 345 topos.features LH speed;
 #X obj 43 302 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
 0;
-#X text 13 -82 Extracting features from a Topos point cloud;
+#X text 13 -82 Extracting features from a Topos point-cloud;
+#X text 502 -15 The third argument sends the specified feature (see
+below) to the second inlet for a fast prototyping;
+#X text 491 113 displacement: accumulative displacement of the point
+cloud;
+#X floatatom 148 272 5 0 0 0 - - -;
+#X text 146 292 Actual point being replaced;
+#X text 147 306 by the cache;
 #X connect 1 0 3 0;
 #X connect 2 0 4 0;
 #X connect 6 0 5 0;
@@ -111,30 +114,31 @@ inlet for fast prototyping;
 #X connect 10 0 9 0;
 #X connect 12 0 11 0;
 #X connect 14 0 13 0;
-#X connect 15 0 42 0;
+#X connect 15 0 40 0;
 #X connect 17 0 16 0;
 #X connect 18 0 19 0;
 #X connect 21 0 20 0;
-#X connect 42 0 1 0;
-#X connect 42 0 2 0;
-#X connect 42 0 6 0;
-#X connect 42 0 8 0;
-#X connect 42 0 10 0;
-#X connect 42 0 12 0;
-#X connect 42 0 14 0;
-#X connect 42 0 17 0;
-#X connect 42 0 18 0;
-#X connect 42 0 21 0;
-#X connect 42 1 0 0;
-#X connect 48 0 54 0;
-#X connect 49 0 54 0;
-#X connect 50 0 54 0;
+#X connect 40 0 1 0;
+#X connect 40 0 2 0;
+#X connect 40 0 6 0;
+#X connect 40 0 8 0;
+#X connect 40 0 10 0;
+#X connect 40 0 12 0;
+#X connect 40 0 14 0;
+#X connect 40 0 17 0;
+#X connect 40 0 18 0;
+#X connect 40 0 21 0;
+#X connect 40 1 0 0;
+#X connect 46 0 52 0;
+#X connect 47 0 52 0;
+#X connect 48 0 52 0;
+#X connect 49 0 48 0;
+#X connect 50 0 52 0;
 #X connect 51 0 50 0;
-#X connect 52 0 54 0;
-#X connect 53 0 52 0;
-#X connect 55 0 52 0;
-#X connect 56 0 52 0;
-#X connect 57 0 52 0;
-#X connect 66 0 68 0;
-#X connect 67 0 66 0;
-#X connect 68 0 69 0;
+#X connect 53 0 50 0;
+#X connect 54 0 50 0;
+#X connect 55 0 50 0;
+#X connect 64 0 66 0;
+#X connect 65 0 64 0;
+#X connect 66 0 67 0;
+#X connect 67 1 73 0;

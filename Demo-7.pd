@@ -20,11 +20,11 @@
 #X msg 140 157 freeze \$1;
 #X obj 142 130 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 396 -80 topos.features LH speed;
+#X obj 392 -85 topos.features LH speed;
 #X obj 580 121 hsl 128 15 0 1 0 0 empty empty ratio -2 -8 0 10 -262144
--1 -1 12521 1;
+-1 -1 6622 1;
 #X obj 587 160 hsl 128 15 0 1 0 0 empty empty amount -2 -8 0 10 -262144
--1 -1 12700 1;
+-1 -1 9987 1;
 #X obj 536 225 output~;
 #N canvas 990 445 450 300 note 0;
 #X obj 53 44 inlet;
@@ -55,10 +55,10 @@
 #X connect 11 0 3 0;
 #X connect 12 0 9 1;
 #X restore 389 162 pd note generator;
-#X obj 387 141 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 387 141 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X floatatom 393 11 5 0 0 0 - - -;
-#X obj 458 -4 unpack f f f;
+#X floatatom 392 22 5 0 0 0 - - -;
+#X obj 453 -19 unpack f f f;
 #N canvas 756 352 528 302 fm 0;
 #X obj 267 178 *~;
 #X floatatom 267 90 0 0 0 0 - - -;
@@ -113,12 +113,12 @@
 #X restore 536 197 pd fm synthesis;
 #X floatatom 725 159 5 0 0 0 - - -;
 #X floatatom 775 161 5 0 0 0 - - -;
-#X floatatom 459 37 5 0 0 0 - - -;
-#X floatatom 574 26 5 0 0 0 - - -;
+#X floatatom 458 23 5 0 0 0 - - -;
+#X floatatom 579 25 5 0 0 0 - - -;
 #X text 724 143 attack;
 #X text 775 143 decay;
 #X text 28 81 FEATURE DETECTION;
-#X text 384 -101 MAPPING;
+#X text 380 -106 MAPPING;
 #X text 379 79 SYNTHESIS;
 #X text 418 140 metro time;
 #X obj 388 116 > 1;
@@ -126,8 +126,8 @@
 #X floatatom 633 5 5 0 0 0 - - -;
 #X floatatom 693 8 5 0 0 0 - - -;
 #X obj 636 29 * 4;
-#X floatatom 534 23 5 0 0 0 - - -;
-#X obj 505 43 * 0.5;
+#X floatatom 534 3 5 0 0 0 - - -;
+#X obj 505 23 * 0.5;
 #X text 30 -154 Applications: mapping [Topos.features] to a FM synthesis
 ;
 #X text 31 -167 DEMO 7;
@@ -145,10 +145,10 @@
 #X msg 119 -1 load movs/dance3.txt;
 #X obj 32 -99 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X text 392 33 Volume;
-#X text 467 59 Horiz;
-#X text 512 66 Vertical;
-#X text 649 48 Speed;
+#X text 391 44 Volume;
+#X text 466 45 Horiz;
+#X text 520 41 Vertical;
+#X text 658 44 Speed;
 #X text 691 25 Displacement;
 #X floatatom 510 118 5 0 0 0 - - -;
 #X obj 486 142 * 600;
@@ -163,7 +163,7 @@
 0;
 #X obj 486 116 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
 0;
-#X obj 492 -101 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
+#X obj 488 -106 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
 0;
 #X obj 7 188 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
 0;
@@ -174,9 +174,9 @@
 #X text 489 115 6;
 #X obj 243 120 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
 0;
-#X text 258 -48 Try to understand the features;
+#X text 402 -65 Try to understand the features;
 #X text 267 80 Try some mapping;
-#X text 573 42 Deepness;
+#X text 578 41 Deepness;
 #X connect 4 0 6 0;
 #X connect 5 0 4 0;
 #X connect 6 0 7 0;

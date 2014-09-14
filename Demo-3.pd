@@ -5,7 +5,7 @@
 #X msg 34 74 stop;
 #X floatatom 17 153 5 0 0 0 - - -;
 #X msg 16 22 loop \$1;
-#X obj 17 3 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+#X obj 17 3 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 73 107 pp load;
 #X obj 84 7 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -20,7 +20,6 @@
 #X obj 275 56 separator;
 #X obj 419 91 translateXYZ;
 #X floatatom 441 72 5 0 0 0 - - -;
-#X obj 159 180 ppp;
 #X obj 490 139 r ske/1/l_hand;
 #X obj 275 129 topos.skeleton 1;
 #N canvas 676 35 693 468 change 0;
@@ -51,7 +50,7 @@
 #X connect 8 0 9 0;
 #X connect 10 0 9 0;
 #X connect 11 0 9 0;
-#X restore 140 305 pd more visualizations;
+#X restore 140 305 pd more visualisations;
 #X msg 129 16 points 10;
 #X msg 139 182 color 1 0 0;
 #X msg 128 -9 sampling 100;
@@ -83,7 +82,7 @@
 #X obj 230 69 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj 209 210 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X msg 140 209 alpha \$1;
 #X obj 203 358 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -115,15 +114,15 @@
 0;
 #X obj 524 -63 topos.gemwin;
 #X text 18 -70 Creating a point cloud topology with Topos;
-#N canvas 978 360 488 443 explaining 0;
+#N canvas 978 360 488 443 explaining 1;
 #X text 19 42 The object topos.rec broadcasts body movements to a receive
 with the following configuration: skeleton/NUMBER/BODY_PART/messages
 data X Y Z;
 #X text 25 216 NUMBERS refer to the symbolic link between topos.rec
-and topos skeleton. Ex: [topos.rec 1] will brooadcast the body coordinates
+and topos skeleton. Ex: [topos.rec 1] will broadcast the body coordinates
 to [topos skeleton 1]. The number 1 is the symbolic link between the
 two objects.;
-#X text 62 342 l_hip l_knee l_foot r_hip r_knee r_foot torso neck head
+#X text 61 354 l_hip l_knee l_foot r_hip r_knee r_foot torso neck head
 l_shoulder l_elbow l_hand r_shoulder r_elbow r_hand;
 #X obj 240 117 r skeleton/1/l_hand/messages;
 #X obj 240 139 route data;
@@ -139,27 +138,25 @@ means right):;
 #X restore 23 351 pd explaining sends and receives;
 #X obj 339 16 translateXYZ;
 #X floatatom 363 -3 5 0 0 0 - - -;
-#X obj 157 317 ppp;
 #X obj 157 296 r ske/1/l_hand;
-#X obj 158 262 ppp;
 #X obj 158 217 r skeleton/1/l_hand/messages;
 #X text 28 211 From topos.rec;
 #X text 27 297 From topos.skeleton;
-#X text 413 341 The first argument [ex:lh] is a symbolic link. The
+#X text 413 348 The first argument [ex:lh] is a symbolic link. The
 [topos] object will broadcast information using this link;
 #X text 486 118 In this case \, the left hand forms the point cloud
 ;
 #X text 585 138 It is also settable in the second argument.;
 #X text 399 195 Gem list;
-#X text 412 379 The second argument [ex:lefthand] is a receive. Instead
+#X text 412 386 The second argument [ex:lefthand] is a receive. Instead
 of using the second inlet for the 3d points the object can receive
 it by this link as a receive.;
-#X text 413 430 The third argument [ex:100] is the sampling period
+#X text 413 437 The third argument [ex:100] is the sampling period
 in ms. In the example the point cloud will be constructed from points
 sampled at every 100 ms;
-#X text 412 478 The fourth argument [ex:10] is the number of points
+#X text 412 485 The fourth argument [ex:10] is the number of points
 of the point cloud. 10 points * 100 ms will generate a point cloud
-of 10 points refering to the last 1 s of movement (10 * 100 ms).;
+of 10 points referring to the last 1 s of movement (10 * 100 ms).;
 #X text 405 252 Gemlist;
 #X floatatom 489 252 5 0 0 0 - - -;
 #X floatatom 559 253 5 0 0 0 - - -;
@@ -203,38 +200,41 @@ of 10 points refering to the last 1 s of movement (10 * 100 ms).;
 0;
 #X obj 133 171 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
 0;
-#X text 394 271 TOPOS EXPLAINED:;
-#X text 415 294 The [topos] object creates the point cloud: a collection
+#X text 394 278 TOPOS EXPLAINED:;
+#X text 415 301 The [topos] object creates the point cloud: a collection
 of n 3d points from past movements that defines a region in space.
 ;
-#X connect 0 0 46 0;
-#X connect 1 0 46 0;
-#X connect 3 0 46 0;
+#X obj 159 180 pddp/print;
+#X obj 155 259 pddp/print;
+#X obj 155 316 pddp/print;
+#X connect 0 0 43 0;
+#X connect 1 0 43 0;
+#X connect 3 0 43 0;
 #X connect 4 0 3 0;
-#X connect 5 0 46 0;
+#X connect 5 0 43 0;
 #X connect 6 0 5 0;
-#X connect 7 0 25 0;
-#X connect 8 0 47 2;
+#X connect 7 0 24 0;
+#X connect 8 0 44 2;
 #X connect 9 0 8 0;
-#X connect 10 0 18 0;
+#X connect 10 0 17 0;
 #X connect 11 0 10 1;
 #X connect 12 0 14 0;
 #X connect 13 0 10 0;
-#X connect 14 0 47 0;
+#X connect 14 0 44 0;
 #X connect 15 0 14 1;
-#X connect 17 0 47 1;
-#X connect 19 0 47 2;
-#X connect 25 0 12 0;
-#X connect 25 0 13 0;
-#X connect 26 0 25 1;
-#X connect 28 0 27 0;
-#X connect 30 0 44 0;
-#X connect 44 0 29 0;
-#X connect 45 0 16 0;
-#X connect 46 0 2 0;
-#X connect 46 2 45 0;
-#X connect 47 1 41 0;
-#X connect 47 2 42 0;
-#X connect 48 0 5 0;
-#X connect 49 0 5 0;
-#X connect 50 0 5 0;
+#X connect 16 0 44 1;
+#X connect 18 0 44 2;
+#X connect 24 0 12 0;
+#X connect 24 0 13 0;
+#X connect 25 0 24 1;
+#X connect 26 0 69 0;
+#X connect 27 0 41 0;
+#X connect 41 0 68 0;
+#X connect 42 0 67 0;
+#X connect 43 0 2 0;
+#X connect 43 2 42 0;
+#X connect 44 1 38 0;
+#X connect 44 2 39 0;
+#X connect 45 0 5 0;
+#X connect 46 0 5 0;
+#X connect 47 0 5 0;

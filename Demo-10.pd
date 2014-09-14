@@ -1,11 +1,26 @@
-#N canvas 407 200 815 674 10;
+#N canvas 608 112 815 674 10;
 #X declare -path toposLib;
 #X declare -path mtl;
 #X declare -path mtl;
 #X declare -lib iem_tab;
 #X declare -lib iem_tab;
 #X declare -lib iem_tab;
-#X obj 149 147 output~;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X obj 147 146 output~;
 #N canvas 639 413 619 185 briefing 0;
 #X text 29 -9 hand choreographies;
 #X text 283 52 calm rhythm \, intensity proportional to activity;
@@ -22,7 +37,7 @@
 #X msg 310 -316 color 0 0 1;
 #X msg -111 -161 debug \$1;
 #X obj -111 -179 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj -120 -203 gemhead;
 #X obj -115 -64 pddp/print;
 #X obj -119 -97 route toposState distanceFrom;
@@ -45,7 +60,7 @@
 #X obj 517 -370 s topos/all/messages;
 #X text 259 -213 Point-to-Point relationships:;
 #X text -128 -228 Region-to-Region relationships:;
-#X msg -41 -161 debug color 0 0 0;
+#X msg -34 -178 debug color 0 0 0;
 #N canvas 860 76 580 657 rhythm 0;
 #X obj 72 32 inlet;
 #X obj 231 41 list-len;
@@ -121,74 +136,74 @@
 #N canvas 785 231 563 525 synthesis 0;
 #X obj 23 2 inlet;
 #X obj 220 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1562 1;
+-1 -1 3900 1;
 #X obj 232 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 715 1;
+-1 -1 3900 1;
 #X obj 244 76 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1384 1;
+-1 -1 3354 1;
 #X obj 254 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1489 1;
+-1 -1 1713 1;
 #X obj 266 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1017 1;
+-1 -1 1132 1;
 #X obj 278 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 887 1;
+-1 -1 2104 1;
 #X obj 288 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1000 1;
+-1 -1 2599 1;
 #X obj 300 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 912 1;
+-1 -1 2926 1;
 #X obj 312 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 725 1;
+-1 -1 3137 1;
 #X obj 324 75 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1291 1;
+-1 -1 3263 1;
 #X obj 200 30 unpack f f f f f f f f f f;
 #X obj 118 164 line;
 #X obj 227 286 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1242 1;
+-1 -1 3900 1;
 #X obj 118 142 pack f 100;
 #X obj 149 184 line;
 #X obj 240 285 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 983 1;
+-1 -1 3900 1;
 #X obj 149 162 pack f 100;
 #X obj 184 204 line;
 #X obj 252 287 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1490 1;
+-1 -1 3163 1;
 #X obj 184 182 pack f 100;
 #X obj 174 124 r \$0f;
 #X obj 206 143 r \$0f;
 #X obj 241 160 r \$0f;
 #X obj 214 226 line;
 #X obj 265 286 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1398 1;
+-1 -1 1562 1;
 #X obj 214 204 pack f 100;
 #X obj 271 182 r \$0f;
 #X obj 245 247 line;
 #X obj 275 284 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 989 1;
+-1 -1 1190 1;
 #X obj 245 225 pack f 100;
 #X obj 302 203 r \$0f;
 #X obj 283 155 line;
 #X obj 286 283 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 862 1;
+-1 -1 2054 1;
 #X obj 283 133 pack f 100;
 #X obj 314 175 line;
 #X obj 298 283 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 868 1;
+-1 -1 2512 1;
 #X obj 314 153 pack f 100;
 #X obj 349 195 line;
 #X obj 310 283 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 789 1;
+-1 -1 2819 1;
 #X obj 349 173 pack f 100;
 #X obj 339 115 r \$0f;
 #X obj 371 134 r \$0f;
 #X obj 406 151 r \$0f;
 #X obj 379 217 line;
 #X obj 322 283 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 889 1;
+-1 -1 3016 1;
 #X obj 379 195 pack f 100;
 #X obj 436 173 r \$0f;
 #X obj 410 238 line;
 #X obj 337 283 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1317 1;
+-1 -1 3056 1;
 #X obj 410 216 pack f 100;
 #X obj 467 194 r \$0f;
 #X obj 208 355 pack f f f f f f f f f f;
@@ -290,7 +305,7 @@
 1 1;
 #X obj 15 -72 route touch in out;
 #X msg 518 -392 alpha 0.4;
-#X obj -20 -19 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj -20 -19 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 208 3 route centerPointsDist;
 #X msg 50 -21 100 80 60 40 20 10 5;
@@ -312,6 +327,21 @@
 #X obj 90 272 outlet~;
 #X obj 129 241 /~ 2;
 #X obj 97 102 *~ 5;
+#N canvas 487 126 450 300 filter 0;
+#X obj 86 -20 mtof;
+#X floatatom 86 5 5 0 0 0 - - -;
+#X obj 52 60 bp~;
+#X floatatom 113 34 5 0 1000 0 - #0-q -;
+#X floatatom 86 -42 5 0 0 0 - - -;
+#X obj 37 -30 inlet~;
+#X obj 57 96 outlet~;
+#X connect 0 0 1 0;
+#X connect 1 0 2 1;
+#X connect 2 0 6 0;
+#X connect 3 0 2 2;
+#X connect 4 0 0 0;
+#X connect 5 0 2 0;
+#X restore 380 191 pd filter;
 #X connect 0 0 9 0;
 #X connect 0 0 13 0;
 #X connect 1 0 10 0;
@@ -329,33 +359,17 @@
 #X connect 12 0 11 0;
 #X connect 13 0 1 0;
 #X restore 149 116 pd distort;
-#N canvas 532 122 450 300 filter 0;
-#X obj 63 -23 mtof;
-#X floatatom 63 2 5 0 0 0 - - -;
-#X obj 52 60 bp~;
-#X floatatom 74 30 5 0 1000 0 - #0-q -;
-#X floatatom 63 -45 5 0 0 0 - - -;
-#X obj 37 -30 inlet~;
-#X obj 57 96 outlet~;
-#X connect 0 0 1 0;
-#X connect 1 0 2 1;
-#X connect 2 0 6 0;
-#X connect 3 0 2 2;
-#X connect 4 0 0 0;
-#X connect 5 0 2 0;
-#X restore 248 162 pd filter;
 #X obj 124 -315 topos lh ske/1/l_hand 100 10;
 #X obj 117 -289 topos rh ske/1/r_hand 100 10;
 #X obj 208 -24 topos.features rh xyzRange;
 #X obj -120 -128 topos.rel.regions RR lh rh 1;
 #X msg 332 -169 debug \$1;
 #X obj 334 -187 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj 262 -159 gemhead;
 #X obj 264 -115 topos.geo.2 inst ske/1/torso ske/1/head;
 #X floatatom 477 -37 5 0 0 0 - - -;
 #X text 200 -49 Features of the right hand;
-#X text -137 -457 Mapping relationships between regions to rhythm;
 #X text -139 -472 DEMO 10;
 #X obj -80 -181 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
 0;
@@ -376,7 +390,6 @@
 #X text 380 -189 4;
 #X text 439 -136 Detect instability of the dancer;
 #X text 223 119 Map instability to distortion;
-#X text 68 -119 Map topolofical features to rhythm;
 #X obj -58 0 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
 0;
 #X text -55 -1 5;
@@ -386,18 +399,25 @@
 0;
 #X obj 313 -188 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
 0;
-#X connect 2 0 49 2;
-#X connect 3 0 48 2;
-#X connect 4 0 51 0;
+#X msg -31 -154 debug draw line \, debug alpha 0.2;
+#X text 50 -116 Map topological features to rhythm;
+#X text -137 -457 Mapping relationships between regions and rhythm
+;
+#X obj 493 -367 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
+0;
+#X obj 518 -340 private/_kinect;
+#X connect 2 0 48 2;
+#X connect 3 0 47 2;
+#X connect 4 0 50 0;
 #X connect 5 0 4 0;
-#X connect 6 0 51 0;
+#X connect 6 0 50 0;
 #X connect 8 0 7 0;
 #X connect 8 0 38 0;
 #X connect 13 0 15 0;
 #X connect 14 0 13 0;
+#X connect 15 0 47 0;
 #X connect 15 0 48 0;
-#X connect 15 0 49 0;
-#X connect 21 0 51 0;
+#X connect 21 0 50 0;
 #X connect 22 0 23 0;
 #X connect 23 0 46 0;
 #X connect 24 0 23 2;
@@ -421,11 +441,12 @@
 #X connect 43 0 22 2;
 #X connect 44 0 22 2;
 #X connect 45 0 46 1;
-#X connect 45 0 56 0;
+#X connect 45 0 55 0;
 #X connect 46 0 0 0;
-#X connect 50 0 41 0;
-#X connect 51 2 8 0;
-#X connect 52 0 55 0;
-#X connect 53 0 52 0;
-#X connect 54 0 55 0;
-#X connect 55 1 45 0;
+#X connect 49 0 41 0;
+#X connect 50 2 8 0;
+#X connect 51 0 54 0;
+#X connect 52 0 51 0;
+#X connect 53 0 54 0;
+#X connect 54 1 45 0;
+#X connect 76 0 50 0;

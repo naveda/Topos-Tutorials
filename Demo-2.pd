@@ -22,7 +22,7 @@
 #X msg 155 201 stop;
 #X floatatom 19 348 5 0 0 0 - - -;
 #X msg 190 198 loop \$1;
-#X obj 191 179 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 191 179 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 633 -32 declare -path toposLib;
 #X obj 20 74 pipelist;
@@ -45,7 +45,6 @@
 #X floatatom 573 166 5 0 0 0 - - -;
 #X obj 19 -40 cnv 15 500 35 empty empty empty 20 12 0 14 -261234 -66577
 0;
-#X text 27 -23 Recording and playing;
 #X obj 501 82 topos.gemwin;
 #X text 49 154 Control recording and playing;
 #X text 275 168 Dialog:;
@@ -80,9 +79,6 @@
 0;
 #X obj 605 321 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
 0;
-#X text 167 -3 The topos.rec object records movement data and broadcasts
-it to the the correspondent topos.skeleton. Ex: topos rec 999 will
-send the data to topos.skeleton 999;
 #X obj 516 300 topos.skeleton 1;
 #X obj 524 23 topos.skeleton 999;
 #X obj 18 320 topos.rec 1;
@@ -99,22 +95,26 @@ send the data to topos.skeleton 999;
 #X msg 326 214 symbol movs/dance2.txt;
 #X msg 324 195 symbol movs/dance1.txt;
 #X text 318 139 Load pre recorded files:;
-#X connect 0 0 52 0;
+#X text 27 -23 Recording \, playing and visualizing;
+#X text 170 0 The topos.rec object records movement data and broadcasts
+it to the the correspondent topos.skeleton. Ex: topos rec 999 will
+send the data to [topos.skeleton 999];
+#X connect 0 0 50 0;
 #X connect 1 0 0 0;
-#X connect 2 0 52 0;
-#X connect 3 0 52 0;
-#X connect 5 0 52 0;
+#X connect 2 0 50 0;
+#X connect 3 0 50 0;
+#X connect 5 0 50 0;
 #X connect 6 0 5 0;
 #X connect 8 0 11 0;
 #X connect 9 0 8 0;
 #X connect 9 1 8 1;
 #X connect 10 0 9 0;
-#X connect 11 0 52 0;
+#X connect 11 0 50 0;
 #X connect 12 0 13 0;
 #X connect 13 0 11 0;
 #X connect 14 0 11 0;
 #X connect 15 0 11 0;
-#X connect 16 0 50 0;
+#X connect 16 0 48 0;
 #X connect 17 0 16 1;
 #X connect 17 0 16 2;
 #X connect 17 0 16 3;
@@ -125,11 +125,11 @@ send the data to topos.skeleton 999;
 #X connect 22 0 23 0;
 #X connect 23 0 18 0;
 #X connect 24 0 23 2;
-#X connect 52 0 4 0;
-#X connect 54 0 52 0;
-#X connect 56 0 52 0;
-#X connect 57 0 52 0;
-#X connect 58 0 52 0;
-#X connect 62 0 56 0;
-#X connect 63 0 56 0;
-#X connect 64 0 56 0;
+#X connect 50 0 4 0;
+#X connect 52 0 50 0;
+#X connect 54 0 50 0;
+#X connect 55 0 50 0;
+#X connect 56 0 50 0;
+#X connect 60 0 54 0;
+#X connect 61 0 54 0;
+#X connect 62 0 54 0;

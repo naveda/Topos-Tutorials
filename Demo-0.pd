@@ -3,39 +3,40 @@
 #X obj 15 -17 cnv 15 500 35 empty empty empty 20 12 0 14 -261234 -66577
 0;
 #X text 18 23 The Topos library is a library of Pure Data abstractions
-that help to visuzalize \, manage and analyze human movement data captured
+that helps to visualise \, manage and analyze human movement data captured
 by motion capture devices.;
 #X text 520 -17 Important links:;
 #X obj 521 29 pddplink https://github.com/Sensebloom/OSCeleton;
 #X obj 523 52 pddplink http://synapsekinect.tumblr.com/;
-#X obj 522 8 pddplink http://naveda.info;
+#X obj 522 8 pddplink http://www.naveda.info;
 #X obj 526 71 pddplink http://www.xbox.com/en-US/kinect;
-#X text 20 242 The following elements will help you to navigate throught
+#X text 20 242 The following elements will help you to navigate through
 the demos:;
 #X obj 29 300 cnv 10 16 16 empty empty empty 20 12 0 14 -258113 -66577
 0;
-#X text 48 282 Indicates the steps of the demo;
+#X text 48 282 Indicates the suggested steps of the demo;
 #X obj 29 279 cnv 10 16 16 empty empty empty 20 12 0 14 -4034 -66577
 0;
-#X text 47 304 Indicates the important elements;
+#X text 47 304 Indicates important elements that you should pay attention
+;
 #X obj 446 242 declare -path toposLib;
 #X text 19 70 PRE-REQUISITES;
 #X text 37 162 Although the objects are simple \, a basic knowledge
-of PD programming is required. Some objects in the library behave like
-GEM objects (see links) and a basic knowledge of GEM is recommended.
-;
+of PD programming is required. Some objects include visualisation routines
+programmed as GEM objects (see links) so that a basic knowledge of
+GEM is recommended.;
 #X text 445 181 You can use this object to make the Topos Lib. available
 in your patch by placing the folder with the library in the folder
 of you patch and placing the following object elsewhere:;
-#X obj 444 270 pddplink hhttp://puredata.info/docs/faq/how-do-i-install-externals-and-help-files
+#X obj 444 270 pddplink http://puredata.info/docs/faq/how-do-i-install-externals-and-help-files
 -text More? See How to install externals?;
 #X text 35 94 For the demos 1 and 2 you may need a sensor KINECT to
 understand and experiment all the features. For the other demos there
-are files containing recorded movement sections that allow the understanding
+are files containing recorded movement sections will help the understanding
 of the concepts.;
 #X text 22 -17 Things you should know before starting with the demos:
 ;
-#N canvas 496 267 463 250 META 0;
+#N canvas 496 267 463 250 META 1;
 #X text -121 100 INLET_1 floats (3);
 #X text -121 120 INLET_2 floats (3);
 #X text -118 143 OUTLET_0 features;
